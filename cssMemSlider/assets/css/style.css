@@ -1,0 +1,9 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    background: repeating-linear-gradient(-45deg, #25282a, #25282a 1vw, #f6f7f7 1vw, #f6f7f7 2vw);
+
+}
+
