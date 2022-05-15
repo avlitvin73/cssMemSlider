@@ -36,6 +36,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 .mem-pic {
@@ -43,7 +45,27 @@ body {
     margin: 0 auto;
 }
 
+.mem-text {
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    color: #f6f7f7;
+}
 
+#mem-4,
+#mem-3,
+#mem-2,
+#mem-1 {
+    opacity: 0;
+}
+
+
+
+/* #mem-4 .mem-pic, 
+#mem-4 .mem-text {
+    
+}
+ */
 
 /* 
 @media (min-width: 1200px) {
