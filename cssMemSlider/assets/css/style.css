@@ -77,9 +77,7 @@ body {
     margin-top: 5%;
 }
 
-#mem-0 {
-    order: -1;
-}
+
 
 #memChoice1:checked ~ #mem-0,
 #memChoice2:checked ~ #mem-1,
