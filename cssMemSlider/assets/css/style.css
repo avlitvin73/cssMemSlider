@@ -53,7 +53,7 @@ body {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-color: #fff;
+    background-color: #71abfe;
     border-radius: 50%;
     border: 10px solid #25282a;
     margin-bottom: 10vh;
@@ -62,7 +62,7 @@ body {
 }
 
 .memChoice:hover {
-    background-color: rgb(185, 185, 185);
+    background-color: #ffffff;
 }
 
 .mem-pic {
@@ -93,13 +93,12 @@ body {
 #memChoice4:checked ~ #forMemChoice4::after {
     content: '';
     display: block;
-    margin-left: 4.5px;
-    margin-top: 4.5px;
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
+    margin-left: 3px;
+    margin-top: 3px;
+    width: 15px;
+    height: 15px;
+    background-color: #25282a;
     border-radius: 50%;
-    border: 1px solid #25282a;
 }
 
 @keyframes slide {
