@@ -17,7 +17,6 @@ body {
     margin: 0 auto;
 }
 
-
 .slider {
     background-color: #25282a;
     max-width: 100%;
@@ -49,19 +48,26 @@ body {
     margin-bottom: 20px;
 }
 
-.memChoice {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: #71abfe;
-    border-radius: 50%;
-    border: 10px solid #25282a;
-    margin-bottom: 10vh;
-    transition: .3s;
-
+.labelChoice {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25282a;
+    margin-bottom: 100vh;
 }
 
-.memChoice:hover {
+.memChoice {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #71abfe;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.labelChoice:hover>.memChoice {
     background-color: #ffffff;
 }
 
@@ -74,10 +80,8 @@ body {
     margin-right: 70%;
     color: #f6f7f7;
     background-color: #25282a;
-    margin-top: 5%;
+    margin-top: 75px;
 }
-
-
 
 #memChoice1:checked ~ #mem-0,
 #memChoice2:checked ~ #mem-1,
@@ -87,18 +91,20 @@ body {
     order: -1;
 }
 
-#memChoice1:checked ~ #forMemChoice1::after,
-#memChoice2:checked ~ #forMemChoice2::after,
-#memChoice3:checked ~ #forMemChoice3::after,
-#memChoice4:checked ~ #forMemChoice4::after {
-    content: '';
-    display: block;
-    margin-left: 3px;
-    margin-top: 3px;
-    width: 15px;
-    height: 15px;
-    background-color: #25282a;
-    border-radius: 50%;
+#memChoice1:checked ~ #forMemChoice1 .memChoice,
+#memChoice2:checked ~ #forMemChoice2 .memChoice,
+#memChoice3:checked ~ #forMemChoice3 .memChoice,
+#memChoice4:checked ~ #forMemChoice4 .memChoice {
+    background-color: #25282a ;
+    border: 2px solid #71abfe;
+}
+
+#memChoice1:checked ~ #forMemChoice1 .memChoice:hover,
+#memChoice2:checked ~ #forMemChoice2 .memChoice:hover,
+#memChoice3:checked ~ #forMemChoice3 .memChoice:hover,
+#memChoice4:checked ~ #forMemChoice4 .memChoice:hover {
+    background-color: #25282a ;
+    border: 2px solid #ffff;
 }
 
 @keyframes slide {
@@ -143,9 +149,6 @@ body {
     .slider {
         height: 70vw;
     }
-    .mem-text {
-        margin-top: 10%;
-    }
 }
 
 
@@ -160,11 +163,11 @@ body {
       .mem {
           margin-bottom: 0 ;
       }
-      .memChoice{
+      .labelChoice{
           transform: scale(.5);
       }
       .mem-text {
-        margin-top: 20%;
+        margin-top: 22%;
         margin-right: 20vw;
         margin-bottom: 10px;
         font-size: 4vw;
