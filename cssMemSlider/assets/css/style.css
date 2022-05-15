@@ -75,7 +75,6 @@ body {
     color: #f6f7f7;
     background-color: #25282a;
     margin-top: 20px;
-    font-size: 1.5em;
 }
 
 #memChoice1:checked ~ #mem-0,
@@ -145,6 +144,18 @@ body {
         max-width: 90vw;
       }
       .slider {
-        height: 70vw;
+        height: 100vw;
+        justify-content: center;
+      }
+      .mem {
+          margin-bottom: 0 ;
+      }
+      .memChoice{
+          transform: scale(.5);
+      }
+      .mem-text {
+        margin-top: 50px;
+        margin-bottom: 10px;
+        font-size: 4vw;
       }
 }  
