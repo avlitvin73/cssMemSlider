@@ -21,51 +21,47 @@ body {
 .slider {
     background-color: #25282a;
     max-width: 100%;
-    height: 70vh;
-    position: relative;
+    height: 55vh;
+    display: flex;
     margin-top: 100px;
+    padding: 2vw;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    overflow: hidden;
 }
 
-.slider input{
-    position: absolute;
-    z-index: -1;
+.slider input {
+    display: none;
 }
 
 .mem {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    right: 30px;
-    bottom: 100px;
+    flex: 0 0 14em;
+    flex-basis: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     border-radius: 10px;
     background-color: #fff;
-    transition: .5s;
-}
-
-.labels {
-    position: absolute;
-    width: 200px;
-    display: flex;
+    transition: 1s;
     justify-content: space-between;
-    bottom: 50px;
-    right: 30px;
+    height: 100%;
+    margin-bottom: 20px;
 }
 
-.labels .memChoice {
+.memChoice {
     display: inline-block;
     width: 40px;
     height: 40px;
     background-color: #fff;
     border-radius: 50%;
     border: 10px solid #25282a;
+    margin-bottom: 10vh;
     transition: .3s;
+
 }
 
-.labels .memChoice:hover {
+.memChoice:hover {
     background-color: rgb(185, 185, 185);
 }
 
@@ -75,82 +71,80 @@ body {
 }
 
 .mem-text {
-    position: absolute;
-    left: 0;
-    bottom: -50px;
+    margin-right: 40%;
     color: #f6f7f7;
     background-color: #25282a;
+    margin-top: 20px;
+    font-size: 1.5em;
 }
 
-#mem-4,
-#mem-3,
-#mem-2,
-#mem-1 {
-    opacity: 0;
+#memChoice1:checked ~ #mem-0,
+#memChoice2:checked ~ #mem-1,
+#memChoice3:checked ~ #mem-2,
+#memChoice4:checked ~ #mem-3 {
+    animation: slide 3s;
+    order: -1;
 }
 
-#memChoice1:checked{
-    bottom: 63px;
-    right: 203px;
-    z-index: 1;
+#memChoice1:checked ~ #forMemChoice1::after,
+#memChoice2:checked ~ #forMemChoice2::after,
+#memChoice3:checked ~ #forMemChoice3::after,
+#memChoice4:checked ~ #forMemChoice4::after {
+    content: '';
+    display: block;
+    margin-left: 4.5px;
+    margin-top: 4.5px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #25282a;
 }
 
-#memChoice2:checked{
-    bottom: 63px;
-    right: 150px;
-    z-index: 1;
-}
-
-#memChoice3:checked{
-    bottom: 63px;
-    right: 97px;
-    z-index: 1;
-}
-
-#memChoice4:checked{
-    bottom: 63px;
-    right: 43px;
-    z-index: 1;
-}
-
-#memChoice1:checked + .mem {
-    opacity: 1;
-}
-#memChoice2:checked + .mem {
-    opacity: 1;
-}
-#memChoice3:checked + .mem {
-    opacity: 1;
-}
-#memChoice4:checked + .mem {
-    opacity: 1;
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 
-/* #mem-4 .mem-pic, 
-#mem-4 .mem-text {
-    
-}
- */
-
-/* 
 @media (min-width: 1200px) {
-
+    
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-
+    .container {
+        max-width: 90vw;
+      }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-
+    .container {
+        max-width: 90vw;
+      }
+      .slider {
+        height: 70vw;
+      }
 }
 
 @media (max-width: 767px) {
-
+    .container {
+        max-width: 90vw;
+      }
+      .slider {
+        height: 70vw;
+      }
 }
 
 
 @media (max-width: 480px) {
-
-} */
+    .container {
+        max-width: 90vw;
+      }
+      .slider {
+        height: 70vw;
+      }
+}  
