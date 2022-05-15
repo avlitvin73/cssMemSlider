@@ -99,10 +99,10 @@ body {
     border: 2px solid #71abfe;
 }
 
-#memChoice1:checked ~ #forMemChoice1 .memChoice:hover,
-#memChoice2:checked ~ #forMemChoice2 .memChoice:hover,
-#memChoice3:checked ~ #forMemChoice3 .memChoice:hover,
-#memChoice4:checked ~ #forMemChoice4 .memChoice:hover {
+#memChoice1:checked ~ #forMemChoice1:hover .memChoice,
+#memChoice2:checked ~ #forMemChoice2:hover .memChoice,
+#memChoice3:checked ~ #forMemChoice3:hover .memChoice,
+#memChoice4:checked ~ #forMemChoice4:hover .memChoice {
     background-color: #25282a ;
     border: 2px solid #ffff;
 }
