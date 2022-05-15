@@ -20,9 +20,11 @@ body {
 .slider {
     background-color: #25282a;
     max-width: 100%;
+    min-height: 400px;
+    max-height: 90vh;
     height: 55vh;
     display: flex;
-    margin-top: 100px;
+    margin-top: 5vh;
     padding: 2vw;
     padding-bottom: 100px;
     flex-wrap: wrap;
@@ -74,6 +76,7 @@ body {
 .mem-pic {
     height: 90%;
     margin: 0 auto;
+    border-radius: 10px;
 }
 
 .mem-text {
@@ -118,6 +121,9 @@ body {
 
 
 @media (min-width: 1200px) {
+    .slider {
+        min-height: 400px;
+    }
     .mem-text {
         margin-right: 70%;
     }
@@ -167,9 +173,9 @@ body {
           transform: scale(.5);
       }
       .mem-text {
-        margin-top: 22%;
+        margin-top: 75px;
         margin-right: 20vw;
         margin-bottom: 10px;
-        font-size: 4vw;
+        
       }
 }  
