@@ -71,7 +71,7 @@ body {
 }
 
 .mem-text {
-    margin-right: 50%;
+    margin-right: 70%;
     color: #f6f7f7;
     background-color: #25282a;
     margin-top: 5%;
@@ -111,7 +111,9 @@ body {
 
 
 @media (min-width: 1200px) {
-    
+    .mem-text {
+        margin-right: 70%;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
