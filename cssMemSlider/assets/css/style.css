@@ -60,6 +60,10 @@ body {
     margin-bottom: 100vh;
 }
 
+.labelChoice:hover {
+    cursor: pointer;
+}
+
 .memChoice {
     display: block;
     width: 20px;
