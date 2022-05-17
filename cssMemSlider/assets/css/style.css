@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    background: repeating-linear-gradient(-45deg, #a1a1a1, #a1a1a1 3px, #f6f7f7 3px, #f6f7f7 6px);
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.slider {
+    background-color: #25282a;
+    max-width: 100%;
+    min-height: 400px;
+    max-height: 90vh;
+    height: 55vh;
+    display: flex;
+    margin-top: 5vh;
+    padding: 2vw;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.slider input {
+    display: none;
+}
+
+.mem {
+    flex: 0 0 14em;
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: 1s;
+    justify-content: space-between;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.labelChoice {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25282a;
+    margin-bottom: 100vh;
+}
+
+.labelChoice:hover {
+    cursor: pointer;
+}
+
+.memChoice {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #71abfe;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.labelChoice:hover>.memChoice {
+    background-color: #ffffff;
+}
+
+.mem-pic {
+    height: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.mem-text {
+    margin-right: 70%;
+    color: #f6f7f7;
+    background-color: #25282a;
+    margin-top: 75px;
+}
+
+#memChoice1:checked ~ #mem-0,
+#memChoice2:checked ~ #mem-1,
+#memChoice3:checked ~ #mem-2,
+#memChoice4:checked ~ #mem-3 {
+    animation: slide 3s;
+    order: -1;
+}
+
+#memChoice1:checked ~ #forMemChoice1 .memChoice,
+#memChoice2:checked ~ #forMemChoice2 .memChoice,
+#memChoice3:checked ~ #forMemChoice3 .memChoice,
+#memChoice4:checked ~ #forMemChoice4 .memChoice {
+    background-color: #25282a ;
+    border: 2px solid #71abfe;
+}
+
+#memChoice1:checked ~ #forMemChoice1:hover .memChoice,
+#memChoice2:checked ~ #forMemChoice2:hover .memChoice,
+#memChoice3:checked ~ #forMemChoice3:hover .memChoice,
+#memChoice4:checked ~ #forMemChoice4:hover .memChoice {
+    background-color: #25282a ;
+    border: 2px solid #ffff;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .slider {
+        min-height: 400px;
+    }
+    .mem-text {
+        margin-right: 70%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 90vw;
+      }
+      
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 90vw;
+    }
+    .slider {
+        height: 70vw;
+    }
+    .mem-text {
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 90vw;
+    }
+    .slider {
+        height: 70vw;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 90vw;
+      }
+      .slider {
+        height: 100vw;
+        justify-content: center;
+      }
+      .mem {
+          margin-bottom: 0 ;
+      }
+      .labelChoice{
+          transform: scale(.5);
+      }
+      .mem-text {
+        margin-top: 75px;
+        margin-right: 20vw;
+        margin-bottom: 10px;
+        
+      }
+}  
